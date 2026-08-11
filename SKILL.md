@@ -83,7 +83,7 @@ For animations, create `<edit>/animations/slot_<id>/` with `Bash` and spawn a su
 ## The process
 
 1. **Inventory.** `ffprobe` every source. `transcribe_batch.py` on the directory. `pack_transcripts.py` to produce `takes_packed.md`. Sample one or two `timeline_view`s for a visual first impression.
-2. **Pre-scan for problems.** One pass over `takes_packed.md` to note verbal slips, obvious mis-speaks, or phrasings to avoid. Plain list, feed into the editor brief.
+2. **Pre-scan for problems.** One pass over `takes_packed.md` to note verbal slips, obvious mis-speaks, filler clusters, audible breaths at phrase boundaries, or phrasings to avoid. Plain list, feed into the editor brief.
 3. **Converse.** Describe what you see in plain English. Ask questions *shaped by the material*. Collect: content type, target length/aspect, aesthetic/brand direction, pacing feel, must-preserve moments, must-cut moments, animation and grade preferences, subtitle needs. Do not use a fixed checklist — the right questions are different every time.
 4. **Propose strategy.** 4–8 sentences: shape, take choices, cut direction, animation plan, grade direction, subtitle style, length estimate. **Wait for confirmation.**
 5. **Execute.** Produce `edl.json` via the editor sub-agent brief. Drill into `timeline_view` at ambiguous moments. Build animations in parallel sub-agents. Apply grade per-segment. Compose via `render.py`.
@@ -105,6 +105,7 @@ For animations, create `<edit>/animations/slot_<id>/` with `Bash` and spawn a su
 - **Preserve peaks.** Laughs, punchlines, emphasis beats. Extend past punchlines to include reactions — the laugh IS the beat.
 - **Speaker handoffs** benefit from air between utterances. Common values: 400–600ms. Less for fast-paced, more for cinematic. Taste call.
 - **Audio events as signals.** `(laughs)`, `(sighs)`, `(applause)` mark beats. Extend past them.
+- **Breaths and fillers are cut targets, not just noise.** Scribe tags audible breaths as audio events and keeps fillers (`umm`, `uh`, false starts) verbatim — both land inline in `takes_packed.md`. Cut them by default when they sit at a phrase boundary and the removal disappears under the 30ms fade. Keep them when they carry the beat: a breath before a punchline is timing, and a filler mid-sentence is sometimes the only thing making the delivery sound human. Decide per instance, not per rule.
 - **Silence gaps are cut candidates.** Silences ≥400ms are usually the cleanest. 150–400ms phrase boundaries are usable with a visual check. <150ms is unsafe (mid-phrase).
 - **Example cut padding** (the launch video shipped with this): 50ms before the first kept word, 80ms after the last. Tighter for montage energy, looser for documentary. Stay in the 30–200ms working window (Hard Rule 7).
 - **Never reason audio and video independently.** Every cut must work on both tracks.
