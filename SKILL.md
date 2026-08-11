@@ -75,8 +75,8 @@ Helpers (`helpers/transcribe.py`, `helpers/render.py`, etc.) live alongside this
 - **`transcribe_batch.py <videos_dir>`** — 4-worker parallel transcription. Use for multi-take.
 - **`pack_transcripts.py --edit-dir <dir>`** — `transcripts/*.json` → `takes_packed.md` (phrase-level, break on silence ≥ 0.5s).
 - **`timeline_view.py <video> <start> <end>`** — filmstrip + waveform PNG. On-demand visual drill-down. **Not a scan tool** — use it at decision points, not constantly.
-- **`render.py <edl.json> -o <out>`** — per-segment extract → concat → overlays (PTS-shifted) → subtitles LAST. `--preview` for 720p fast. `--build-subtitles` to generate master.srt inline.
-- **`grade.py <in> -o <out>`** — ffmpeg filter chain grade. Presets + `--filter '<raw>'` for custom.
+- **`render.py <edl.json> -o <out>`** — per-segment extract → concat → overlays (PTS-shifted) → subtitles LAST → loudness normalization. Quality ladder: `--draft` (720p, ultrafast, CRF 28 — cut-point verification only), `--preview` (1080p, CRF 22 — evaluable for QC), default final (1080p, CRF 20). `--build-subtitles` generates `master.srt` inline, `--no-subtitles` skips them even if the EDL references one, `--no-loudnorm` skips normalization.
+- **`grade.py <in> -o <out>`** — ffmpeg filter chain grade. **Auto-analysis is the CLI default** — omit `--preset` and it samples the clip and builds a bounded correction. `--preset <name>` or `--filter '<raw>'` to override. `--analyze <clip>` prints the filter auto mode would produce without writing output. `--list-presets` / `--print-preset <name>` to inspect.
 
 For animations, create `<edit>/animations/slot_<id>/` with `Bash` and spawn a sub-agent via the `Agent` tool.
 
@@ -166,10 +166,13 @@ Your job is to **reason about the image**, not apply a preset. Look at a frame (
 
 Mental model is ASC CDL. Per channel: `out = (in * slope + offset) ** power`, then global saturation. `slope` → highlights, `offset` → shadows, `power` → midtones.
 
-**Example filter chains** (`grade.py` has `--list-presets`; use them as starting points or mix your own):
+**Auto mode.** Set `"grade": "auto"` in the EDL and each segment is analyzed and corrected independently — useful when takes were shot under drifting light. It samples frame statistics and addresses only underexposure, flatness, and heavy desaturation. Every axis is capped at ±8% and it applies **no color shift** — the target is "clean," not "graded." A well-balanced clip falls back to the `subtle` baseline. Run `grade.py --analyze <clip>` to see what it would do before committing.
 
-- **`warm_cinematic`** — retro/technical, subtle teal/orange split, desaturated. Shipped in a real launch video. Safe for talking heads.
+**Example filter chains** (`grade.py --list-presets`; use them as starting points or mix your own):
+
+- **`subtle`** — barely perceptible cleanup, no color shift. The safe floor and the auto-mode fallback.
 - **`neutral_punch`** — minimal corrective: contrast bump + gentle S-curve. No hue shifts.
+- **`warm_cinematic`** — retro/cinematic, subtle teal/orange split, desaturated. Shipped in a real launch video. Opt-in only — too aggressive for standard talking-head content.
 - **`none`** — straight copy. Default when the user hasn't asked.
 
 For anything else — portraiture, nature, product, music video, documentary — invent your own chain. `grade.py --filter '<raw ffmpeg>'` accepts any filter string.
@@ -262,6 +265,14 @@ This is one style. If the brand is warm and serif, use that. If it's colorful an
 
 One sub-agent = one file (unique filenames, parallel agents don't overwrite each other).
 
+## Audio loudness (automatic)
+
+`render.py` normalizes the final mix to **-14 LUFS integrated, -1 dBTP true peak, LRA 11** — the streaming/social target. This runs by default on every render; you do not need to ask for it.
+
+Final renders use a proper two-pass loudnorm: measure, then correct with the measured values. Draft renders use a faster one-pass approximation. If measurement fails the audio is passed through unchanged rather than guessed at.
+
+Pass `--no-loudnorm` only when the user is handing the output to a downstream mix that will do its own normalization — double-normalizing costs dynamic range. Note that normalization runs on the composite after concat, so a segment that was quiet relative to its neighbors stays relatively quiet; fix per-segment level problems in the grade/extract stage, not here.
+
 ## Output spec
 
 Match the source unless the user asked for something specific. Common targets: `1920×1080@24` cinematic, `1920×1080@30` screen content, `1080×1920@30` vertical social, `3840×2160@24` 4K cinema, `1080×1080@30` square. `render.py` defaults the scale to 1080p from any source; pass `--filter` or edit the extract command for other targets. Worth asking the user which delivery format matters.
@@ -287,7 +298,7 @@ Match the source unless the user asked for something specific. Common targets: `
 }
 ```
 
-`grade` is a preset name or raw ffmpeg filter. `overlays` are rendered animation clips. `subtitles` is optional and applied LAST.
+`grade` is `"auto"` (per-segment analysis), a preset name, or a raw ffmpeg filter. `overlays` are rendered animation clips. `subtitles` is optional and applied LAST.
 
 ## Memory — `project.md`
 
