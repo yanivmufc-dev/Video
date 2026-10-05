@@ -1,0 +1,286 @@
+{
+  "license": "All files are CC0 1.0 (public domain dedication): commercial use, no attribution required, redistribution allowed.",
+  "note": "Leveled to a common loudness (loudest 50 ms at -16 dBFS RMS, peak under -1 dBFS), leading silence trimmed, 48 kHz stereo WAV. Longer whoosh/riser/boom/glitch/typing sounds are synthesized locally by make_sfx.py (no license at all).",
+  "retrieved": "2026-09-29",
+  "files": {
+    "whip.wav": {
+      "title": "Swish (Freesound #838766, via @remotion/sfx)",
+      "author": "JW_Audio",
+      "source": "https://freesound.org/s/838766/",
+      "license": "CC0-1.0",
+      "use": "whip transition, fast punch-in",
+      "duration_s": 0.17,
+      "sha256": "018d99d68923f8a8f2fe31a13d0830e1b4beb6d4ae2422d7370479984e2e6ebc"
+    },
+    "mouse-click.wav": {
+      "title": "Mouse Click Sound (Freesound #678248, via @remotion/sfx)",
+      "author": "Pixeliota",
+      "source": "https://freesound.org/s/678248/",
+      "license": "CC0-1.0",
+      "use": "cursor clicks in screen demos",
+      "duration_s": 0.27,
+      "sha256": "5eaf20aa24932cc7d3977d124ab0674e4b6e5f7ff547a681e437158a959b877e"
+    },
+    "shutter.wav": {
+      "title": "DSLR Shutter fast (Freesound #539136, via @remotion/sfx)",
+      "author": "ristooooo1",
+      "source": "https://freesound.org/s/539136/",
+      "license": "CC0-1.0",
+      "use": "flash transition, screenshot moment",
+      "duration_s": 0.35,
+      "sha256": "c93cb2e577cc5d433e365d19015054a70bc309d74f445ea3896d6df70954a408"
+    },
+    "shutter-old.wav": {
+      "title": "Old camera shutter (Freesound #409093, via @remotion/sfx)",
+      "author": "hmilleo",
+      "source": "https://freesound.org/s/409093/",
+      "license": "CC0-1.0",
+      "use": "retro photo moment",
+      "duration_s": 0.25,
+      "sha256": "1d3ee283ee9f01722e40b5def771a470da0e51ffe9d93cc817d812b1947c37c3"
+    },
+    "page-turn.wav": {
+      "title": "Draw Knife 1 (Kenney, via @remotion/sfx)",
+      "author": "Kenney",
+      "source": "https://www.remotion.dev/docs/sfx/page-turn",
+      "license": "CC0-1.0",
+      "use": "page/slide change",
+      "duration_s": 0.4,
+      "sha256": "c49693d5bf14ca0c2e54615680ef9e5a4accb878dc43700afbafa1c958cc36d5"
+    },
+    "switch.wav": {
+      "title": "Switch 35 (Kenney UI Audio, via @remotion/sfx)",
+      "author": "Kenney",
+      "source": "https://www.remotion.dev/docs/sfx/ui-switch",
+      "license": "CC0-1.0",
+      "use": "toggle / UI switch",
+      "duration_s": 0.33,
+      "sha256": "3aeb5dc8223c42fb647e0d5c42f9a9d7e30bbdb3734e6327963bafcb02ea59a2"
+    },
+    "click.wav": {
+      "title": "Interface Sounds: click_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "chips, UI taps, list items",
+      "duration_s": 0.01,
+      "sha256": "f6182402e902acff54e75e41966381c7f6fffd8915275ecf6c7681d8f97f24b6"
+    },
+    "pop.wav": {
+      "title": "Interface Sounds: drop_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "emoji / sticker pops in",
+      "duration_s": 0.19,
+      "sha256": "6fc7e60fdfa9562aeb8b24586f69b89c8727a4b0f5682cbdf3c8517cbd296d51"
+    },
+    "bubble.wav": {
+      "title": "Interface Sounds: drop_004",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "chat bubbles, softer pop",
+      "duration_s": 0.28,
+      "sha256": "eb20fa7bcd17f65abdc3799609e896c1f82c95cf2f0a1096973bbcd4b62267ef"
+    },
+    "pluck.wav": {
+      "title": "Interface Sounds: pluck_001",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "light accent",
+      "duration_s": 0.1,
+      "sha256": "0b97d4b4ee14fab4ad84a2648f6b0cae6d9bcb794ee408a83b915dc1b5307b5e"
+    },
+    "tick.wav": {
+      "title": "Interface Sounds: tick_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "counters, typing single keys",
+      "duration_s": 0.02,
+      "sha256": "dbd84e6ff91829c6a780c1452f3d1602c03c1b3a9ff0fc3a01ed2f5756466125"
+    },
+    "ding.wav": {
+      "title": "Interface Sounds: glass_001",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "a number / fact lands",
+      "duration_s": 0.28,
+      "sha256": "966cfc64a32fc03efc01ff9c8410cfdb65eb4871e3b1f7c2028a2697bfb02036"
+    },
+    "bell.wav": {
+      "title": "Impact Sounds: impactBell_heavy_000",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0-1.0",
+      "use": "big reveal bell",
+      "duration_s": 1.48,
+      "sha256": "6ec29b53d8b20d2d56907665f2e4141b0ac32a8f666bda7a6c36749963ac4751"
+    },
+    "success.wav": {
+      "title": "Interface Sounds: confirmation_001",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "done / checkmark",
+      "duration_s": 0.29,
+      "sha256": "a3cfee3d2b1c84df210fa65dd28495236d3cbbd9c6ecf1ba0c9bf51ab373b964"
+    },
+    "success-soft.wav": {
+      "title": "uisfx soft/success",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "gentle success",
+      "duration_s": 0.9,
+      "sha256": "07ace6822a9f999783d58e89dc37a6d98350793eb3a82caaa7f2bf28c928c746"
+    },
+    "error.wav": {
+      "title": "Interface Sounds: error_004",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "mistake / wrong",
+      "duration_s": 0.1,
+      "sha256": "accc0f81f5640e0e3dd663b06987077c1715820ff450a7cb9b2201369c131e13"
+    },
+    "error-soft.wav": {
+      "title": "uisfx soft/error",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "gentle 'no'",
+      "duration_s": 0.76,
+      "sha256": "7ce5ccc5fd73e456d06165076d35678e769fb920f36a4ae29b14b2d563230702"
+    },
+    "scroll.wav": {
+      "title": "Interface Sounds: scroll_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "scrolling a page",
+      "duration_s": 1.0,
+      "sha256": "f18f7a025b2890c298575e3f7d250ef61011f1c8602e4b2a0030b2f51693b7da"
+    },
+    "toggle.wav": {
+      "title": "Interface Sounds: toggle_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "on/off",
+      "duration_s": 0.14,
+      "sha256": "a51278723a2ac218e6e07c29ec6c03a37c60c96e0ecedcd1e5d8b0c3ae71132e"
+    },
+    "question.wav": {
+      "title": "Interface Sounds: question_001",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "a question on screen",
+      "duration_s": 0.49,
+      "sha256": "1d9409a07cff15b141577ceea1f6f569e0f29d7f002a698a6b81181748d93932"
+    },
+    "open.wav": {
+      "title": "Interface Sounds: maximize_004",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "a card / window opens",
+      "duration_s": 0.39,
+      "sha256": "fa0775d2c019d128bf8bf411f5d553efdfe02785415a859d656282106a8f0c68"
+    },
+    "close.wav": {
+      "title": "Interface Sounds: minimize_004",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "a card / window closes",
+      "duration_s": 0.42,
+      "sha256": "27f8b7e047cfa5789d0e9c8c678a51fd0bb5c07d152dbd95f89ec767fb714b8f"
+    },
+    "swipe.wav": {
+      "title": "uisfx soft/swipe",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "swipe / slide",
+      "duration_s": 0.47,
+      "sha256": "b698c873142da0b1e7f8b5f0ef871883a69983233ec4052b8adc56c4b0ae4c67"
+    },
+    "notification.wav": {
+      "title": "uisfx soft/notification",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "message / notification",
+      "duration_s": 0.71,
+      "sha256": "14ab550cac3653b37f711bc706ab6a71bcae308418eea166442d1cf2918834f8"
+    },
+    "cash.wav": {
+      "title": "uisfx soft/purchase",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "money / price",
+      "duration_s": 0.87,
+      "sha256": "7fa33c463d77215a34640b25ce3f348bf13b02e9d5a290075b1dbd335c1a5731"
+    },
+    "sparkle.wav": {
+      "title": "uisfx glass/reward",
+      "author": "Yuki Capital (uisfx)",
+      "source": "https://github.com/romainsimon/uisfx",
+      "license": "CC0-1.0",
+      "use": "magic / idea moment",
+      "duration_s": 0.9,
+      "sha256": "96c9fe3e34a7663b2290b6d76106bc84f66b1cbfe58366efb43454706639cc5c"
+    },
+    "power-up.wav": {
+      "title": "Digital Audio: powerUp2",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0-1.0",
+      "use": "level-up / upgrade",
+      "duration_s": 0.35,
+      "sha256": "1541a34be9d66f11ec3116b48aee34f347ef537d1c7c8e6db17b4f6cd4973f71"
+    },
+    "punch.wav": {
+      "title": "Impact Sounds: impactPunch_heavy_000",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0-1.0",
+      "use": "hard hit on a word",
+      "duration_s": 0.65,
+      "sha256": "2bdfc6d8f54b140bade98180fb64db6eadb67723c8b1ebd57848ac1e16d78b4d"
+    },
+    "thud.wav": {
+      "title": "Impact Sounds: impactSoft_heavy_000",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0-1.0",
+      "use": "soft drama hit",
+      "duration_s": 0.53,
+      "sha256": "61ad77eb3499732b209cf4df625e343dec7c9a6b6532f146e3b0289a3569bae9"
+    },
+    "whoosh-quick.wav": {
+      "title": "Woosh (Freesound #831936, via @remotion/sfx)",
+      "author": "1bob",
+      "source": "https://freesound.org/s/831936/",
+      "license": "CC0-1.0",
+      "use": "transitions, B-roll entering",
+      "duration_s": 0.12,
+      "sha256": "ee28cc7f3597c5b9b1f077ed528e3cf5b1102a35a230596cf9e28b4437a7e7d0"
+    },
+    "glitch-blip.wav": {
+      "title": "Interface Sounds: glitch_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "use": "glitch transition",
+      "duration_s": 0.03,
+      "sha256": "52c94e2482c0b63ff66e8e1d2f49ede82c77ade17ce949f2f7dfbf448b44a72d"
+    }
+  }
+}

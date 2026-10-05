@@ -1,0 +1,7 @@
+# Codex settings for this studio folder (loaded once you trust the folder).
+# The studio downloads packages/models and renders inside this folder only.
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+[sandbox_workspace_write]
+network_access = true   # npm, the Hebrew model, stock footage/emoji downloads

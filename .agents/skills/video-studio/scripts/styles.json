@@ -1,0 +1,76 @@
+{
+  "_doc": "Style presets for plan.json \"style\". Anything set explicitly in plan.json wins over the preset. Names and descriptions are shown to the member on the style board.",
+  "creator": {
+    "name_he": "קריאייטור",
+    "desc_he": "כתוביות קריוקי לבנות עם מילות מפתח צבעוניות, אנרגטי ונקי — הסגנון הנפוץ ברילס",
+    "theme": {"accent": "#F71C8A", "text": "#FFFFFF", "bg": "#0B0B10", "font": "Heebo", "displayFont": "Secular One"},
+    "captions": {"style": "karaoke", "maxWords": 3, "size": 78},
+    "look": "natural",
+    "sceneBg": "gradient",
+    "transition": "whip"
+  },
+  "punch": {
+    "name_he": "פאנץ׳ מילה-מילה",
+    "desc_he": "מילה-מילה שקופצת, צהוב על המילה המדוברת, קצב אגרסיבי — מקסימום שימור צפייה",
+    "theme": {"accent": "#FFE500", "text": "#FFFFFF", "bg": "#0A0A0A", "font": "Rubik", "displayFont": "Rubik"},
+    "captions": {"style": "punch", "maxWords": 2, "size": 92},
+    "look": "punchy",
+    "sceneBg": "grid",
+    "transition": "zoom"
+  },
+  "minimal": {
+    "name_he": "מינימליסטי",
+    "desc_he": "נקי ורגוע, כתוביות עדינות, רקעים בהירים ואוויר — מתאים לתוכן מקצועי ו-B2B",
+    "theme": {"accent": "#2563EB", "text": "#FFFFFF", "bg": "#F4F1E9", "font": "Assistant", "displayFont": "Assistant"},
+    "captions": {"style": "clean", "maxWords": 4, "size": 64},
+    "look": "natural",
+    "sceneBg": "light",
+    "transition": "fade"
+  },
+  "cinematic": {
+    "name_he": "קולנועי",
+    "desc_he": "צבע קולנועי חם-כחלחל, ויניטה, פסי קולנוע, כתוביות קטנות — פרימיום ורציני",
+    "theme": {"accent": "#E0A458", "text": "#FFFFFF", "bg": "#0C0A09", "font": "Heebo", "displayFont": "Frank Ruhl Libre"},
+    "captions": {"style": "plain", "maxWords": 4, "size": 62},
+    "look": "cinematic",
+    "sceneBg": "spotlight",
+    "transition": "lightleak",
+    "letterbox": true
+  },
+  "neon": {
+    "name_he": "ניאון-טק",
+    "desc_he": "רקע כהה עם רשת, כתוביות זוהרות, גליצ'ים — מושלם לטכנולוגיה ו-AI",
+    "theme": {"accent": "#00E5FF", "text": "#FFFFFF", "bg": "#05060F", "font": "Heebo", "displayFont": "Secular One"},
+    "captions": {"style": "glow", "maxWords": 3, "size": 80},
+    "look": "neon",
+    "sceneBg": "grid",
+    "transition": "glitch"
+  },
+  "retro": {
+    "name_he": "רטרו VHS",
+    "desc_he": "קלטת וידאו משנות ה-90: גרעין, סטייה כרומטית, פסי סריקה, כתוביות מכונת כתיבה",
+    "theme": {"accent": "#FFB000", "text": "#FFFFFF", "bg": "#120B1F", "font": "Rubik", "displayFont": "Secular One"},
+    "captions": {"style": "typewriter", "maxWords": 4, "size": 70},
+    "look": "vhs",
+    "sceneBg": "dots",
+    "transition": "glitch"
+  },
+  "luxury": {
+    "name_he": "יוקרה",
+    "desc_he": "שחור וזהב, טיפוגרפיה מעודנת, תנועה איטית — נדל\"ן, אופנה, מותגי פרימיום",
+    "theme": {"accent": "#C9A45C", "text": "#F5F1E8", "bg": "#0A0907", "font": "Assistant", "displayFont": "Frank Ruhl Libre"},
+    "captions": {"style": "clean", "maxWords": 3, "size": 66},
+    "look": "warm",
+    "sceneBg": "spotlight",
+    "transition": "fade"
+  },
+  "energetic": {
+    "name_he": "אנרגטי",
+    "desc_he": "כתוביות ענקיות, צבעים רוויים, רעידות ופיצוצים — צעיר, מצחיק, ויראלי",
+    "theme": {"accent": "#FF3B30", "text": "#FFFFFF", "bg": "#101010", "font": "Rubik", "displayFont": "Rubik"},
+    "captions": {"style": "pop", "maxWords": 2, "size": 104},
+    "look": "punchy",
+    "sceneBg": "gradient",
+    "transition": "shake"
+  }
+}
