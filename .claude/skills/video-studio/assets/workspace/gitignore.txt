@@ -1,0 +1,13 @@
+# generated / heavy / private — not for version control
+tools/
+.cache/
+.tmp/
+.studio/logs/
+api-keys.txt
+input/
+output/
+projects/*/media/
+projects/*/renders/
+projects/*/sheets/
+remotion/node_modules/
+remotion/public/p/
